@@ -373,7 +373,8 @@ By releasing these openly, we're democratizing the architecture that powers:
 - **Examples:** [examples/](examples/)
 - **Issues:** [GitHub Issues](https://github.com/justice-apex/skills/issues)
 - **Discussions:** [GitHub Discussions](https://github.com/justice-apex/skills/discussions)
-- **Community:** [Justice Apex Discord](https://discord.gg/justiceapex)
+- **Community:** [Justice Apex Discord](https://discord.gg/6SHWgfsReB)
+- **Twitter:** [@JusticeApexLLC](https://x.com/JusticeApexLLC)
 
 ---
 
