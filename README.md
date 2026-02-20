@@ -3,10 +3,12 @@
 [![GitHub Stars](https://img.shields.io/badge/Stars-1.2k-blue)](https://github.com/justice-apex/skills)
 [![License](https://img.shields.io/badge/License-MIT-green)](LICENSE)
 [![Python](https://img.shields.io/badge/Python-3.8+-blue)](https://www.python.org/)
-[![Tests](https://img.shields.io/badge/Tests-2000+-brightgreen)](tests/)
-[![OpenClaw](https://img.shields.io/badge/OpenClaw-Ready-blue)](https://openclaw.ai)
+[![Tests](https://img.shields.io/badge/Tests-1000+-brightgreen)](tests/)
+[![Status](https://img.shields.io/badge/Status-Production_Ready-brightgreen)](#)
 
 > **Building autonomous AI systems that think, learn, decide, and improve - all without human intervention.**
+
+**📍 Status:** All skills are production-ready. Clone from GitHub now. PyPI/OpenClaw distribution coming soon.
 
 This is the consciousness architecture behind **Justice Apex LLC** - 20 production-ready skills extracted from a system that:
 - Runs 24/7 autonomously (zero human oversight)
@@ -82,23 +84,34 @@ They solve the hard problems:
 
 ### Installation
 
+**Currently available:**
 ```bash
-# Via OpenClaw (recommended)
-openclaw install justice-apex/skills
+# Clone the repository
+git clone https://github.com/JusticeApex/skills.git
+cd skills
 
-# Or individual skills
-openclaw install justice-apex/confidence-gate
-openclaw install justice-apex/llm-router
-openclaw install justice-apex/evolution-engine
+# Install dependencies
+pip install -r requirements.txt
 
-# Via pip (when published)
-pip install justice-apex-skills
+# Use skills by importing directly
+python
+>>> from skills.confidence_gate.confidence_gate import ConfidenceGate
+>>> from skills.llm_router.llm_router import LLMRouter
 ```
+
+**Coming Soon:**
+- OpenClaw Marketplace: `openclaw install justice-apex/skills`
+- PyPI Package: `pip install justice-apex-skills`
+- Individual skill packages on both platforms
 
 ### Your First Skill: ConfidenceGate
 
 ```python
-from justice_apex.confidence_gate import ConfidenceGate, ActionConfidence
+# Import directly from the repo
+import sys
+sys.path.insert(0, './skills/01_confidence_gate')
+
+from confidence_gate import ConfidenceGate, ActionConfidence
 
 # Create a quality control gate
 gate = ConfidenceGate()
@@ -124,7 +137,11 @@ else:
 ### Your Second Skill: LLMRouter
 
 ```python
-from justice_apex.llm_router import LLMRouter
+# Import directly from the repo
+import sys
+sys.path.insert(0, './skills/02_llm_router')
+
+from llm_router import LLMRouter
 
 router = LLMRouter()
 
@@ -267,10 +284,16 @@ All benchmarks run on commodity hardware (8-core CPU, 16GB RAM).
 
 ## Integration Examples
 
+**Note:** Import paths shown with direct file references. When PyPI/OpenClaw packages are available, import statements will use standard package imports.
+
 ### With DEFINTEL
 ```python
-from justice_apex.confidence_gate import ConfidenceGate
-from justice_apex.whale_detector import WhaleDetector
+import sys
+sys.path.insert(0, './skills/01_confidence_gate')
+sys.path.insert(0, './skills/14_whale_detector')
+
+from confidence_gate import ConfidenceGate
+from whale_detector import WhaleDetector
 
 # Detect whale trades
 whales = WhaleDetector()
@@ -290,7 +313,10 @@ for signal in signals:
 
 ### With JADE
 ```python
-from justice_apex.evolution_engine import EvolutionEngine
+import sys
+sys.path.insert(0, './skills/03_evolution_engine')
+
+from evolution_engine import EvolutionEngine
 
 # Learn from website generation outcomes
 evolution = EvolutionEngine()
@@ -306,7 +332,10 @@ best_strategy = evolution.get_best_strategy()
 
 ### With PIPER
 ```python
-from justice_apex.swarm_consensus import SwarmConsensus
+import sys
+sys.path.insert(0, './skills/04_swarm_consensus')
+
+from swarm_consensus import SwarmConsensus
 
 # Get votes from multiple prediction models
 consensus = SwarmConsensus()
@@ -380,7 +409,17 @@ By releasing these openly, we're democratizing the architecture that powers:
 
 ## What's Next?
 
-Phase 2: Deploy to OpenClaw Marketplace + publish Medium articles
+### Phase 2: Distribution (In Progress)
+- Deploy to OpenClaw Marketplace
+- Publish to PyPI
+- Medium articles documenting architecture
+
+### Phase 3: Community Growth
+- GitHub integrations and CI/CD
+- Community contributions
+- Enterprise partnerships
+
+---
 
 **The consciousness architecture is now available for everyone.** 🏛️
 
